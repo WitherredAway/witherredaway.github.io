@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Cocon";
+    src: url('fonts/Cocon-Regular-Font.otf');
+    src: url('fonts/Cocon-Regular-Font.otf') format('opentype');
+  }
+
+body {
+    /* display: flex;
+    justify-content: center; */
+    background-color: #192747;
+    font-family: "Cocon", Arial, Helvetica, sans-serif;
+    color: #b2b5bf;
+}
+
+
+#main-header-small {
+    font-size: 20px;
+}
+
+#main-header-big {
+    color: #54c798;
+}
+
+#about-me {
+    color: #c75493;
+}
+
+#my-projects {
+    color: #b4daf5;
+}
+
+#label-discord-bot {
+    background-position: center 100px;
+}
+
+.section {
+    background-color: #253250;
+    border-radius: 10px;
+}
+
+#wedge {
+    background-color: #131b2f;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 100;
+}

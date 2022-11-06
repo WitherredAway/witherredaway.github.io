@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>Pokétwo ID extractor</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <py-env>
+    </py-env>
+</head>
+
+<body>
+    <form onsubmit="return false">
+        <div id="wedge">
+            <h1><strong>Pokétwo ID extractor</strong></h1>
+            <p>Inspired by superjedi224.github.io/pk2exchange</p>
+        </div>
+        <div class="formcontainer">
+            <div class="container">
+                <label id="input-title"><strong>Input</strong></label>
+                <textarea rows=5 type="text" id="input" placeholder="1000001　:_: Level 1 Ralts　•　50.00%　•　100 pc
+1000002　:_: Level 2 Ralts　•　50.00%　•　100 pc
+1000003　:_: Level 3 Ralts　•　50.00%　•　100 pc" required></textarea>
+                <input pys-onClick="get_ids" type="submit" id="btn-form" class="submit" value="Extract IDs">
+                <label id="output-title"><strong>Output</strong></label>
+                <textarea readonly rows=5 type="text" id="output" placeholder="1000001 1000002 1000003"></textarea>
+                <input pys-onClick="copy_text" id="btn-copy" type="button" class="button" value="❐ Copy all" disabled>
+                <input pys-onClick="copy_text_individual" id="btn-copy-ind" type="button" class="button" value="❐ Copy first one" disabled>
+                <label id="prefix-title">with prefix:</label>
+                <input type="text" id="prefix" placeholder="p!m b">
+            </div>
+        </div>
+    <py-script src="script.py" async></py-script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <py-env>
+    </py-env>
+</head>
+
+<body>
+    <form onsubmit="return false">
+        <div id="wedge">
+            <h1><strong>Replace prefix</strong></h1>
+        </div>
+        <div class="formcontainer">
+            <div class="container">
+                <label id="input-title"><strong>Input</strong></label>
+                <textarea rows=5 type="text" id="input" placeholder="• `p!start` to start
+• `p!pick` to pick a starter
+• `p!catch` to catch a pokemon" required></textarea>
+                <select id="prefix-from">
+                    <option value="p!">p!</option>
+                    <option value="@​Pokétwo#8236 ">@\u200bPokétwo#8236</option>
+                    <option value="@Pokétwo#8236 ">@Pokétwo#8236</option>
+                </select>
+                <span id="to-text">to</span>
+                <select id="prefix-to">
+                    <option value="@​Pokétwo#8236 ">@\u200bPokétwo#8236</option>
+                    <option value="/">/</option>
+                    <option value="p!">p!</option>
+                    <option value="@Pokétwo#8236 ">@Pokétwo#8236</option>
+                </select>
+                <input pys-onClick="replace" type="submit" id="btn-form" class="submit" value="Replace">
+                <br>
+                <span id="output-title" data-hover="The '@​Pokétwo#8236' contains a zero-width character after the @ so it doesn't turn into a mention when pasted">
+                    <strong>Output</strong>
+                </span>
+                <textarea readonly rows=5 type="text" id="output" placeholder="• `@​Pokétwo#8236 start` to start
+• `@​Pokétwo#8236 pick` to pick a starter
+• `@​Pokétwo#8236 catch` to catch a pokemon"></textarea>
+                <input pys-onClick="copy_text" id="btn-copy" type="button" class="button" value="❐ Copy" disabled>
+            </div>
+        </div>
+    <py-script src="script.py"></py-script>
+    </form>
+</body>
+
+</html>

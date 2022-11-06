@@ -5,8 +5,8 @@
   }
 
 body {
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
     background-color: #192747;
     font-family: "Cocon", Arial, Helvetica, sans-serif;
     color: #b2b5bf;
@@ -21,29 +21,44 @@ body {
     color: #54c798;
 }
 
-#about-me {
-    color: #c75493;
-}
-
-#my-projects {
-    color: #b4daf5;
-}
 
 #label-discord-bot {
     background-position: center 100px;
 }
 
-.section {
-    background-color: #253250;
-    border-radius: 10px;
+.section-header {
+    margin: auto auto 0px 5px;
 }
 
-#wedge {
+.section {
     background-color: #131b2f;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    height: 50px;
-    width: 100%;
-    z-index: 100;
+    border-radius: 10px;
+    padding: 5px 10px 15px 10px;
+}
+
+.subsection {
+    background-color: #253250;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: -4px;
+}
+
+a {
+    color: #9cc0d2;
+}
+
+a:hover, a:visited {
+    color: #73a3d0;
+}
+
+a[class="project"] {
+    text-decoration: none;
+}
+
+.icon-text {
+    margin: 0 auto
+}
+
+.container {
+    margin: 10px 10px;
 }

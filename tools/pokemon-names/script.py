@@ -21,7 +21,7 @@ def disable_check():
 async def get_ids(*args, **kwargs):
     input = document.getElementById('input').value
 
-    pattern = re.compile(r':?_:? ([\w_.\s-]+)(?: ".+")? (?:heart)?　•　Lvl', re.MULTILINE)
+    pattern = re.compile(r':?_:? ([\w_.\s-]+):?(?:unknown|male|female):?(?: ".+?")? ?(?::?heart:?|❤️)?　•　Lvl', re.MULTILINE)
     
     ids = pattern.findall(input)
 
